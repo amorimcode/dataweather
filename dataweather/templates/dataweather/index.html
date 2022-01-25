@@ -1,5 +1,7 @@
 {% load sass_tags %}
-<link href="{% sass_src 'dataweather/styles.scss' %}" rel="stylesheet" type="text/css" />
+
+<link href="{% sass_src 'dataweather/style.scss' %}" rel="stylesheet" type="text/css" />
+
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -7,6 +9,11 @@
     {% endfor %}
     </ul>
     <p>teste</p>
+    <div class="home">
+        <p>paragrafo</p>
+        <p>paragrafo2</p>
+        <span>span</span>
+    </div>
 {% else %}
-    <p>No polls are available.</p>
+    <p>no questions available</p>
 {% endif %}

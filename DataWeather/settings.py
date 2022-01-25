@@ -124,12 +124,15 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-TATICFILES_FINDERS = [
+STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
+
+SASS_PRECISION = 8
+
+SASS_OUTPUT_STYLE = 'compact'
 
 STATIC_ROOT = BASE_DIR / 'static'
 
